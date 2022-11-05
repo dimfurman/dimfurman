@@ -1,0 +1,100 @@
+header {
+    text-align: center;
+    padding: 16px 32px;
+}
+nav a, nav a:visited {
+    display: inline-block;
+    color: white;
+    background-color: #0057b6;
+    padding: 6px;
+    border-radius: 6px;
+    margin: 6px 12px 12px 0;
+    text-decoration: none;
+    border: 2px solid #0057b6;
+}
+nav a:hover {
+    color: #0057b6;
+    background-color: #fff;
+}
+html {
+    background-color: #ccc;
+}
+body {
+    font-family: 'Raleway', sans-serif; 
+    max-width: 1080px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+h1 {
+    font-family: 'Lora', serif;
+    font-weight: 600;
+    font-size: 32px;
+}
+h2, h3 {
+    font-family: 'Lora', serif;
+    font-weight: 400;
+    margin-top: 32px;
+}
+.foto {
+    width: 200px;
+    height: 200px;
+    border-radius: 50px;
+}
+.material-icons {
+    vertical-align: middle;
+    margin-right: 12px;
+    font-size: 33px;
+}
+ul.it_know {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 600px;
+    max-width: calc(100% - 60px);
+}
+.it_know li {
+    width: 100px;
+    margin: 0 12px 12px 0;
+}
+.contacts p {
+    padding-left: 0px;
+}
+.contacts a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #0057b6;
+}
+.contacts a:hover {
+    color: #5c98d8;
+}
+.contacts a:visited {
+    color: #0057b6;
+}
+main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 16px 32px;
+}
+section:first-child {
+    width: 33%;
+    min-width: 300px;
+}
+section:last-child {
+    width: 66%;
+    min-width: 300px;
+}
+section div p, section div ul {
+    padding-left: 47px;
+}
+@media screen and (max-width: 930px) {
+    section:first-child {
+        width: 100%;
+        text-align: center;
+    }
+    section:last-child {
+        width: 100%;
+    }
+}
