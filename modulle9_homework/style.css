@@ -1,0 +1,17 @@
+body {
+    background-color: darkgray;
+}
+
+#img {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 700px;
+    background-color: white;
+}
+
+#img img {
+    margin: 32px;
+    max-width: 200px;
+    max-height: 200px;
+    border: 1px #cacaca solid;
+}
