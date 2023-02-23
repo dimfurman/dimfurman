@@ -146,7 +146,72 @@ function unit4() {
 
 }
 
+function unin5() {
+    const btn = document.getElementById("btn3");
+    btn.addEventListener("click", f1);
+    let pic_array = localStorage.getItem("pic_array").split(',');
+    console.log(pic_array);
+    const img_block = document.getElementById('img3');
+    if (pic_array!==null) {
+        pic_array.forEach(el => {
+            let pic = document.createElement("IMG");
+            pic.src = el;
+            img_block.append(pic);
+        });
+    }
+    function f1() {
+
+        let num = document.getElementById('num').value;
+        let limit = document.getElementById('limit').value;
+
+        if (isNaN(parseInt(num))) num = 0;
+        if (num > 10 || num < 1) num = 0;
+        if (isNaN(parseInt(limit))) limit = 0;
+        if (limit > 10 || limit < 1) limit = 0;
+
+        if (num + limit == 0) {
+            document.getElementById('p3').innerHTML = 'Номер страницы и лимит вне диапазона от 1 до 10';
+            return;
+        } else {
+            if (num == 0) {
+                document.getElementById('p3').innerHTML = 'Номер страницы вне диапазона от 1 до 10';
+                return;
+            }
+            if (limit == 0) {
+                document.getElementById('p3').innerHTML = 'Лимит вне диапазона от 1 до 10';
+                return;
+            }
+        }
+
+        img_block.innerHTML = "";
+        const xhr = new XMLHttpRequest();
+        let pic_array = [];
+
+        
+        xhr.onload = function () {
+            const response = JSON.parse(xhr.response);
+            response.forEach(img_r => {
+                let pic = document.createElement("IMG");
+                pic.src = img_r.download_url;
+                pic_array.push(pic.src);
+                img_block.append(pic);
+            });
+            localStorage.setItem("pic_array", pic_array);
+        };
+
+        xhr.onerror = function () {
+            console.log('Ошибка запроса');
+        };
+
+        xhr.open("get", "https://picsum.photos/v2/list?page="+num+"&limit=" + limit, true);
+        xhr.send();
+        
+
+    }
+}
+
 document.addEventListener('DOMContentLoaded', function () {
     unit3();
     unit4();
+    unin5();
 });

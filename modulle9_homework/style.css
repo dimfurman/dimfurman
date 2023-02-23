@@ -2,14 +2,14 @@ body {
     background-color: darkgray;
 }
 
-#img {
+#img, #img3 {
     display: flex;
     flex-wrap: wrap;
     max-width: 700px;
     background-color: white;
 }
 
-#img img {
+#img img, #img3 img {
     margin: 32px;
     max-width: 200px;
     max-height: 200px;
