@@ -1,0 +1,58 @@
+#svg1 .full {
+    display: none;
+}
+
+#svg1.active .full {
+    display: block;
+}
+
+#svg1.active .empty {
+    display: none;
+}
+
+.chat {
+    width: 550px;
+}
+
+.user_input {
+    display: flex;
+    gap: 12px;
+}
+
+#input_text {
+    width: 100%;
+    padding: 6px 12px;
+    border: 2px solid cadetblue;
+    border-radius: 6px;
+}
+
+button {
+    background-color: cadetblue;
+    border: none;
+    padding: 6px 12px;
+    color: white;
+    font-weight: 600;
+}
+#chat_window {
+    border: 2px solid cadetblue;
+    border-radius: 10px;
+    padding: 12px;
+    margin-top: 12px;
+    height: 300px;
+    overflow-y: auto;
+}
+#chat_window > * {
+    display: block;
+    width: fit-content;
+    padding: 6px 12px;
+    border: 2px solid cadetblue;
+    border-radius: 6px;
+    word-break: break-all;
+    margin-bottom: 12px;
+}
+.user {
+    margin-left: auto;
+}
+.server {
+    color: rgb(5, 163, 0);
+}
